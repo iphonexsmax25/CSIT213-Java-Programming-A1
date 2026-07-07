@@ -86,8 +86,11 @@ public class A1 {
 
 	//Q5 - Write a function to return the product of all elements in the int array
 	public static int Q5(int[] nums) {
-		
-		return 0;
+		int product =1;
+                for(int i=0;i<nums.length;i++){
+                    product *= nums[i];
+                }
+		return product;
 	}
 
 	//Q6 - Write a function to return how many times target appears in the array
