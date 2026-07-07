@@ -41,8 +41,13 @@ public class A1 {
 
 	//Q1 - Write a function to return the sum of all odd numbers in the int array
 	public static int Q1(int[] nums) {
-		
-		return 0;
+		int total = 0;
+                for (int i = 0; i < nums.length; i++){
+                    if(nums[i] % 2 != 0){
+                        total += nums[i];
+                    }
+                }
+		return total;
 	}
 
 	//Q2 - Write a function to return the largest value in the int array
