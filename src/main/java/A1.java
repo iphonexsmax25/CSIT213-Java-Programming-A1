@@ -52,21 +52,33 @@ public class A1 {
 
 	//Q2 - Write a function to return the largest value in the int array
 	public static int Q2(int[] nums) {
-
-		
-		return 0;
+            int max = nums[0];
+            for(int i = 1;i < nums.length;i++){
+                if(nums [i] > max ){
+                    max = nums[i];
+                }
+            }
+		return max;
 	}
 
 
 	//Q3 - Write a function to return a new int array that is the reverse of the input array
 	public static int[] Q3(int[] nums) {
-
-		return new int[]{0};
+            int[] result = new int[nums.length];
+            for (int i=0;i<nums.length;i++){
+                result[i] = nums[nums.length - 1 - i]; 
+                }
+            
+		return result;
 	}
 
 	//Q4 - Write a function to return the index of target in the array, or -1 if it is not found (linear search)
 	public static int Q4(int[] nums, int target) {
-		
+		for(int i=0;i<nums.length;i++){
+                    if(nums[i] == target){
+                        return i;
+                    }
+                }
 		return -1;
 	}
 
