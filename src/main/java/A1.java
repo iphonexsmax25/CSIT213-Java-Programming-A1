@@ -106,8 +106,11 @@ public class A1 {
 
 	//Q7 - Write a function to return a new int array where every element is doubled
 	public static int[] Q7(int[] nums) {
-
-		return new int[]{0};
+            int[] result =new int[nums.length];
+            for(int i=0;i<nums.length;i++){
+                result[i]= nums[i] *2;
+            }
+		return result;
 	}
 
 	//Q8 - Write a function to return the second largest distinct value in the array
