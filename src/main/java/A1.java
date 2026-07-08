@@ -115,8 +115,19 @@ public class A1 {
 
 	//Q8 - Write a function to return the second largest distinct value in the array
 	public static int Q8(int[] nums) {
-		
-		return 0;
+		int largest = nums[0];
+                for(int i=1;i<nums.length;i++){
+                    largest = nums[i];
+                }
+                
+                int second = Integer.MIN_VALUE;
+                for(int i=0;i<nums.length;i++){
+                    if (nums[i] != largest && nums[i] > second){
+                        second = nums[i];
+                    }
+                }
+                
+		return second;
 	}
 
 	//Q9 - Write a function to return the range of the array (largest value minus smallest value)
