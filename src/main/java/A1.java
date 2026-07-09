@@ -138,7 +138,7 @@ public class A1 {
                 if(nums[i] > max ){
                     max = nums[i];
                 }
-                if(nums[i] < min){
+                else if(nums[i] < min){
                     min = nums[i];
                 }
             }
