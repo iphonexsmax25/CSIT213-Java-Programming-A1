@@ -87,7 +87,7 @@ public class A1 {
 	//Q5 - Write a function to return the product of all elements in the int array
 	public static int Q5(int[] nums) {
 		int product =1;
-                for(int i=0;i<nums.length;i++){
+                for(int i = 0; i < nums.length; i++){
                     product *= nums[i];
                 }
 		return product;
@@ -96,7 +96,7 @@ public class A1 {
 	//Q6 - Write a function to return how many times target appears in the array
 	public static int Q6(int[] nums, int target) {
 		int count = 0;
-                for(int i=0;i<nums.length;i++){
+                for(int i = 0; i < nums.length; i++){
                     if(nums[i] == target){
                         count++;
                     }
@@ -107,7 +107,7 @@ public class A1 {
 	//Q7 - Write a function to return a new int array where every element is doubled
 	public static int[] Q7(int[] nums) {
             int[] result =new int[nums.length];
-            for(int i=0;i<nums.length;i++){
+            for(int i = 0; i < nums.length; i++){
                 result[i]= nums[i] *2;
             }
 		return result;
@@ -116,12 +116,12 @@ public class A1 {
 	//Q8 - Write a function to return the second largest distinct value in the array
 	public static int Q8(int[] nums) {
 		int largest = nums[0];
-                for(int i=1;i<nums.length;i++){
+                for(int i = 1; i < nums.length; i++){
                     largest = nums[i];
                 }
                 
                 int second = Integer.MIN_VALUE;
-                for(int i=0;i<nums.length;i++){
+                for(int i = 0; i < nums.length; i++){
                     if (nums[i] != largest && nums[i] > second){
                         second = nums[i];
                     }
@@ -134,7 +134,7 @@ public class A1 {
 	public static int Q9(int[] nums) {
             int max = nums[0];
             int min = nums[0];
-            for (int i=1;i<nums.length;i++ ){
+            for (int i = 1; i < nums.length; i++ ){
                 if(nums[i] > max ){
                     max = nums[i];
                 }
@@ -147,22 +147,54 @@ public class A1 {
 
 	//Q10 - Write a function to return a new int array sorted in ascending order
 	public static int[] Q10(int[] nums) {
-
-		return new int[]{0};
+            int [] sorted = nums.clone();
+            for (int i = 0; i < sorted.length-1; i++){
+                for(int j = 0; j > sorted.length-1-i; j++){
+                    if(sorted[j] > sorted[j+1]){
+                        int temp = sorted[j];
+                        sorted[j] = sorted[j+1];
+                        sorted[j+1] = temp;
+                    }
+            }
+            }
+		return sorted;
 	}
 
 	//Q11 - Write a function to return the number of distinct (unique) values in the array
 	public static int Q11(int[] nums) {
+            int count =0;
+            for ( int i = 0; i < nums.length; i++){
+                boolean seenBefore = false;
+                for (int j = 0; j < i; j++){
+                    if(nums[j] == nums[i]){
+                        seenBefore = true;
+                        break;
+                    }
+                    if(seenBefore){
+                        
+                    }else {
+                        count++;
+                    }
+                }
+            }
 
-		return 0;
+		return count;
 	}
 
 
 	//Q12 - Write a function to return a new int array rotated one place to the right
 	//      e.g. {1,2,3,4} becomes {4,1,2,3}
 	public static int[] Q12(int[] nums) {
+            int[] result = new int[nums.length];
+            if(nums.length == 0){
+              return  result;
+            }
+            result[0] =nums[nums.length - 1];
+            for(int i = 1; i < nums.length; i++){
+                result[i] = nums [i-1];
+            }
 
-		return new int[]{0};
+		return result;
 	}
 
 
@@ -172,6 +204,13 @@ public class A1 {
 
 	//Q13 - Write a function to return the number of vowels (a, e, i, o, u) in the string
 	public static int Q13(String s) {
+            int count= 0;
+            for(int i = 0; i < s.length(); i++){
+                char c = Character.toLowerCase(s.charAt(i));
+                if(c =='a' || c == 'e' || c== 'i' || c== 'o' || c== 'u'){
+                    count++;
+                }
+            }
 
 		return 0;
 	}
