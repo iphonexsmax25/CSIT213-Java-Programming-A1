@@ -132,7 +132,17 @@ public class A1 {
 
 	//Q9 - Write a function to return the range of the array (largest value minus smallest value)
 	public static int Q9(int[] nums) {
-		return 0;
+            int max = nums[0];
+            int min = nums[0];
+            for (int i=1;i<nums.length;i++ ){
+                if(nums[i] > max ){
+                    max = nums[i];
+                }
+                if(nums[i] < min){
+                    min = nums[i];
+                }
+            }
+		return max - min;
 	}
 
 	//Q10 - Write a function to return a new int array sorted in ascending order
