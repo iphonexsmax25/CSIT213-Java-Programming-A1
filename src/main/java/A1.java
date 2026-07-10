@@ -226,21 +226,43 @@ public class A1 {
 
 	//Q15 - Write a function to return true if the string is a palindrome, otherwise false
 	public static boolean Q15(String s) {
-
+            int left = 0;
+            int right = s.length() - 1;
+            while (left < right){
+                if(s.charAt(left) != s.charAt(right)){
+                    return false;
+                }
+                left++;
+                right--;
+            }
 		return false;
 	}
 
 
 	//Q16 - Write a function to return the string with every space replaced by an underscore '_'
 	public static String Q16(String s) {
+            String result = "";
+            for(int i = 0; i < s.length(); i++){
+                char c = s.charAt(i);
+                if (c == ' '){
+                    result += '_' ;
+            } else{
+                    result += c;
+                }
+            }
 
-		return "";
+		return result;
 	}
 
 	//Q17 - Write a function to return the number of uppercase letters in the string
 	public static int Q17(String s) {
-
-		return 0;
+            int count = 0;
+		for(int i = 0;i < s.length(); i++) {
+			if(Character.isUpperCase(s.charAt(i))) {
+				count++;
+			}
+		}
+		return count;
 	}
 
 	//Q18 - Write a function to return the string with all vowels removed
