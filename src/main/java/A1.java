@@ -217,8 +217,11 @@ public class A1 {
 
 	//Q14 - Write a function to return the reverse of the string
 	public static String Q14(String s) {
-
-		return "";
+            String result ="";
+            for(int i = s.length()-1; i <= 0 ; i-- ){
+                result += s.charAt(i);
+            }
+		return result;
 	}
 
 	//Q15 - Write a function to return true if the string is a palindrome, otherwise false
