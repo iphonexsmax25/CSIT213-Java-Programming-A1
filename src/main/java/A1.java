@@ -257,18 +257,25 @@ public class A1 {
 	//Q17 - Write a function to return the number of uppercase letters in the string
 	public static int Q17(String s) {
             int count = 0;
-		for(int i = 0;i < s.length(); i++) {
-			if(Character.isUpperCase(s.charAt(i))) {
-				count++;
-			}
-		}
-		return count;
+            for(int i = 0;i < s.length(); i++) {
+                if(Character.isUpperCase(s.charAt(i))) {
+                    count++;
+                }
+	    }
+            return count;
 	}
 
 	//Q18 - Write a function to return the string with all vowels removed
 	public static String Q18(String s) {
+            String result = "";
+            for(int i = 0; i < s.length(); i++){
+                char c = Character.toLowerCase(s.charAt(i));
+                if ( c!='a' && c!='e' && c!='i' && c!= 'o' && c!= 'u' ){
+                    result += s.charAt(i);
+                }
+            }
 
-		return "";
+		return result;
 	}
 
 	//Q19 - Write a function to return true if the two strings are anagrams of each other, otherwise false
