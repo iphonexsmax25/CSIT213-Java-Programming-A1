@@ -226,16 +226,13 @@ public class A1 {
 
 	//Q15 - Write a function to return true if the string is a palindrome, otherwise false
 	public static boolean Q15(String s) {
-            int left = 0;
-            int right = s.length() - 1;
-            while (left < right){
-                if(s.charAt(left) != s.charAt(right)){
+            int n = s.length();
+            for(int i = 0; i < n / 2; i++){
+                if(s.charAt(i) != s.charAt(n - 1 - i)){
                     return false;
                 }
-                left++;
-                right--;
             }
-		return false;
+		return true;
 	}
 
 
@@ -281,13 +278,37 @@ public class A1 {
 	//Q19 - Write a function to return true if the two strings are anagrams of each other, otherwise false
 	//      (an anagram uses exactly the same letters the same number of times)
 	public static boolean Q19(String a, String b) {
+            if(a.length() != b.length()){
+                return false;
+            }
+            int[] counts = new int[256];
+            for(int i = 0; i < a.length(); i++){
+                counts[a.charAt(i)]++;
+                counts [b.charAt(i)]--;
+            }
+            for(int i = 0; i < counts.length; i++){
+                if(counts[i] != 0 ){
+                    return false;
+                }
+            }
 
-		return false;
+		return true;
 	}
 
 	//Q20 - Write a function to return the first character that does not repeat in the string
 	//      e.g. "swiss" returns 'w'. Return a space ' ' if every character repeats.
 	public static char Q20(String s) {
+            for(int i = 0; i < s.length(); i++){
+                int count = 0;
+                for(int j = 0; j < s.length(); j++){
+                    if(s.charAt(j) == s.charAt(i)){
+                        count++;
+                    }
+                    if (count ==1){
+                        return s.charAt(i);
+                    }
+                }
+            }
 
 		return ' ';
 	}
@@ -295,8 +316,22 @@ public class A1 {
 	//Q21 - Write a function to return the string in title case
 	//      (the first letter of each word is uppercase, the rest are lowercase)
 	public static String Q21(String s) {
+            String result = "";
+            boolean startOfWord = true;
+            for(int i = 0; i < s.length(); i++){
+                char c = s.charAt(i);
+                if(c == ' '){
+                    result += c;
+                    startOfWord = true; 
+                } else if(startOfWord){
+                    result += Character.toUpperCase(c);
+                    startOfWord = false;
+                } else{
+                    result += Character.toLowerCase(c);
+                }
+            }
 
-		return "";
+		return result;
 	}
 
 	//Q22 - Write a function to return the character that appears most often in the string
@@ -317,13 +352,20 @@ public class A1 {
 				best = c;
 			}
 		}
-		return ' ';
+		return best;
 	}
 
 	//Q23 - Write a function to return how many times the substring sub appears in s (non-overlapping)
 	public static int Q23(String s, String sub) {
-
-		return 0;
+            int count = 0;
+            int nextAllowed = 0;
+            for(int i = 0; i <= s.length() - sub.length(); i++){
+                if( i <= nextAllowed && s.substring(i, i+ sub.length()).equals(sub)){
+                    count++;
+                    nextAllowed = i + sub.length();
+                }
+            }
+		return count;
 	}
 
 	//Q24 - Write a function to return true if the string contains only digit characters (0-9), otherwise false
