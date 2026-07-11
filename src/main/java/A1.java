@@ -371,8 +371,17 @@ public class A1 {
 	//Q24 - Write a function to return true if the string contains only digit characters (0-9), otherwise false
 	//      (an empty string should return false)
 	public static boolean Q24(String s) {
+            if(s.length() == 0){
+                return false;
+            }
+            for(int i = 0; i <= s.length(); i++){
+                char c = s.charAt(i);
+                if( c < '0' || c > '9'){
+                    return false;
+                }
+            }
 
-		return false;
+		return true;
 	}
 
 	//Q25 - Write a function to return the string with duplicate characters removed, keeping the first occurrence
