@@ -412,12 +412,23 @@ public class A1 {
 
 	//Q26 - Write a function to return true if n is a prime number, otherwise false
 	public static boolean Q26(int n) {
-	
-		return false;
+            if (n < 2){
+                return false;
+            }
+            for (int i = 2; i * i<= n; i++){
+                if (n % i == 0){
+                    return false;
+                }
+                    
+            }
+            
+		return true;
 	}
 
 	//Q27 - Write a function to return the factorial of n (n! = 1 * 2 * 3 * ... * n). Assume n >= 0.
 	public static int Q27(int n) {
+            int result = 1;
+            
 
 		return 0;
 	}
