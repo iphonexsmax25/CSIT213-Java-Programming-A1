@@ -428,9 +428,11 @@ public class A1 {
 	//Q27 - Write a function to return the factorial of n (n! = 1 * 2 * 3 * ... * n). Assume n >= 0.
 	public static int Q27(int n) {
             int result = 1;
-            
+            for (int i = 2; i * i <= n ; i++){
+                result *= i;
+            }
 
-		return 0;
+		return result;
 	}
 
 	//Q28 - Write a function to return the nth Fibonacci number where fib(0)=0, fib(1)=1
