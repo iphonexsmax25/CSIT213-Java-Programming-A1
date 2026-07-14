@@ -387,8 +387,22 @@ public class A1 {
 	//Q25 - Write a function to return the string with duplicate characters removed, keeping the first occurrence
 	//      e.g. "banana" returns "ban"
 	public static String Q25(String s) {
+            String result = "";
+            for(int i = 0; i < s.length(); i++){
+                char c = s.charAt(i);
+                boolean seenBefore = false;
+                for(int j = 0; j< i; j++){
+                    if(s.charAt(j) == c){
+                        seenBefore = true;
+                        break;
+                    }
+                }
+                if(!seenBefore){
+                    result += c;
+                }
+            }
 
-		return " ";
+		return result;
 	}
 
 
