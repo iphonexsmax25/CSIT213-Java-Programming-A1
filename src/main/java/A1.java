@@ -528,32 +528,60 @@ public class A1 {
 
 	//Q35 - Write a function that takes an int array and returns an ArrayList<Integer> containing only the even numbers
 	public static ArrayList<Integer> Q35(int[] nums) {
+            ArrayList<Integer> result = new ArrayList<Integer>();
+            for (int i = 0; i < nums.length; i++){
+                if( nums[i] % 2 == 0){
+                    result.add(nums[i]);
+                }
+            }
 
-		return null;
+		return result;
 	}
 
 	//Q36 - Write a function to return the sum of all numbers in an ArrayList<Integer>
 	public static int Q36(ArrayList<Integer> list) {
+            int total = 0;
+            for(int i = 0; i < list.size(); i++){
+                total += list.get(i);
+            }
 
-		return 0;
+		return total;
 	}
 
 	//Q37 - Write a function to return a new ArrayList<Integer> with duplicates removed, keeping the original order
 	public static ArrayList<Integer> Q37(ArrayList<Integer> list) {
+            ArrayList<Integer> result = new ArrayList<Integer>();
+            for (int i = 0; i < list.size(); i++){
+                if (!result.contains(list.get(i))){
+                    result.add(list.get(i));
+                }
+            }
 
-		return null;
+		return result;
 	}
 
 	//Q38 - Write a function to return a new ArrayList<Integer> containing only the elements greater than threshold
 	public static ArrayList<Integer> Q38(ArrayList<Integer> list, int threshold) {
-
-		return null;
+            ArrayList<Integer> result = new ArrayList<Integer>();
+            for(int i = 0; i < list.size();i++){
+                if(list.get(i) > threshold){
+                    result.add(list.get(i));
+                }
+            }
+            
+		return result;
 	}
 
 	//Q39 - Write a function to return the largest number in an ArrayList<Integer>
 	public static int Q39(ArrayList<Integer> list) {
+            int max = list.get(0);
+            for (int i = 1; i < list.size(); i++){
+                if (list.get(i) > max){
+                    max = list.get(i);
+                }
+            }
 
-		return 0;
+		return max;
 	}
 
 
@@ -563,8 +591,14 @@ public class A1 {
 
 	//Q40 - Write a function to return the sum of all elements in a 2D int array (a grid)
 	public static int Q40(int[][] grid) {
+            int total =0;
+            for(int r =0; r < grid.length; r++){
+                for(int c = 0; c < grid[r].length; c++){
+                    total += grid[r][c];
+                }
+            }
 
-		return 0;
+		return total;
 	}
 
 	//Q41 - Write a function to return the sum of all elements in a given row of the grid
