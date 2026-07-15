@@ -437,46 +437,88 @@ public class A1 {
 
 	//Q28 - Write a function to return the nth Fibonacci number where fib(0)=0, fib(1)=1
 	public static int Q28(int n) {
-
+            if (n == 0){
+                return 0; 
+            }
+            if (n == 1){
+                return 1;
+            }
+            int prev = 0;
+            int curr = 1;
+            for(int i = 2; i<= n; i++){
+                int next = prev + curr;
+                prev = curr;
+                curr = next;
+            }
 		return 0;
 	}
 
 	//Q29 - Write a function to return the sum of the digits of a positive integer n
 	public static int Q29(int n) {
+            int sum = 0;
+            for(; n > 0; n /= 10){
+                sum += n % 10;
+            }
 
-		return 0;
+		return sum;
 	}
 
 	//Q30 - Write a function to return how many digits are in a positive integer n
 	public static int Q30(int n) {
+            int count = 0;
+            for (; n > 0; n /= 10){
+                count++;
+            }
 
-		return 0;
+		return count;
 	}
 
 	//Q31 - Write a function to return the integer formed by reversing the digits of a positive integer n
 	//      e.g. 1234 returns 4321
 	public static int Q31(int n) {
+            int result = 0;
+            for (; n > 0; n /= 10){
+                result = result * 10 + n % 10;
+            }
 
-		return 0;
+		return result;
 	}
 
 	//Q32 - Write a function to return true if year is a leap year, otherwise false
 	//      (a leap year is divisible by 4, except century years which must be divisible by 400)
 	public static boolean Q32(int year) {
+            if(year % 400 == 0){
+                return true;
+            }
+            if(year % 100 == 0){
+                return false;
+            }
 
-		return false;
+		return year % 4 == 0;
 	}
 
 	//Q33 - Write a function to return the greatest common divisor (GCD) of two positive integers a and b
 	public static int Q33(int a, int b) {
+            for(; b != 0;){
+                int temp = b;
+                b = a% b; 
+                a = temp;
+                
+            }
 
-		return 0;
+		return a;
 	}
 
 	//Q34 - Write a function to return how many multiples of 3 there are from 1 to n (inclusive)
 	public static int Q34(int n) {
+            int count = 0;
+            for (int i = 1; i <= n; i++){
+                if (i % 3 == 0){
+                    count ++;
+                }
+            }
 
-		return 0;
+		return count;
 	}
 
 
