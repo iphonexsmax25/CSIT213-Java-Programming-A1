@@ -493,8 +493,11 @@ public class A1 {
             if(year % 100 == 0){
                 return false;
             }
+            if (year % 4 == 0){
+                return true;
+            }
 
-		return year % 4 == 0;
+		return false;
 	}
 
 	//Q33 - Write a function to return the greatest common divisor (GCD) of two positive integers a and b
