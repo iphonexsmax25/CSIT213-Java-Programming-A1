@@ -321,6 +321,8 @@ public class A1_Assertion {
 		try {
 			assert A1.Q26(7) == true;
 			assert A1.Q26(8) == false;
+                        assert A1.Q26(10) == false;
+
 			System.out.println("Q26 test passed");
 			score += 1;
 		} catch (AssertionError ex) {
@@ -332,6 +334,8 @@ public class A1_Assertion {
 		// ---------- Q27 ----------
 		try {
 			assert A1.Q27(5) == 120;
+                        assert A1.Q27(8) == 100;
+                        
 			System.out.println("Q27 test passed");
 			score += 1;
 		} catch (AssertionError ex) {
