@@ -308,6 +308,7 @@ public class A1_Assertion {
 		// ---------- Q25 ----------
 		try {
 			assert A1.Q25("banana").equals("ban");
+                        assert A1.Q25("apple").equals("app");
 			System.out.println("Q25 test passed");
 			score += 1;
 		} catch (AssertionError ex) {
