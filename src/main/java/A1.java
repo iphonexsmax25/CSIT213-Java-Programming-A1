@@ -412,7 +412,7 @@ public class A1 {
 
 	//Q26 - Write a function to return true if n is a prime number, otherwise false
 	public static boolean Q26(int n) {
-            if (n < 2){
+            if (n <= 1){
                 return false;
             }
             for (int i = 2; i * i<= n; i++){
