@@ -397,6 +397,7 @@ public class A1_Assertion {
 			assert A1.Q32(2000) == true;
 			assert A1.Q32(1900) == false;
 			assert A1.Q32(2024) == true;
+                        assert A1.Q32(2026) == true;
 			System.out.println("Q32 test passed");
 			score += 1;
 		} catch (AssertionError ex) {
@@ -408,6 +409,7 @@ public class A1_Assertion {
 		// ---------- Q33 ----------
 		try {
 			assert A1.Q33(48, 18) == 6;
+                        assert A1.Q33(52, 8) == 8;
 			System.out.println("Q33 test passed");
 			score += 1;
 		} catch (AssertionError ex) {
@@ -419,6 +421,7 @@ public class A1_Assertion {
 		// ---------- Q34 ----------
 		try {
 			assert A1.Q34(10) == 3;
+                        assert A1.Q34(20) == 6;
 			System.out.println("Q34 test passed");
 			score += 1;
 		} catch (AssertionError ex) {
