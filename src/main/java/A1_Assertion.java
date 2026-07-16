@@ -145,6 +145,7 @@ public class A1_Assertion {
 			int[] nums = { 1, 2, 2, 3, 4, 4, 4, };
                         assert A1.Q11(nums) == 4;
                         System.out.println("Q11 test passed");
+                        score += 1;
 
 		} catch (AssertionError ex) {
 			System.out.println("Q11 test failed - AssertionError");
@@ -246,6 +247,7 @@ public class A1_Assertion {
 		// ---------- Q20 ----------
 		try {
 			assert A1.Q20("swiss") == 'w';
+                        assert A1.Q20("ghjkl") ==' ';
 			System.out.println("Q20 test passed");
 			score += 1;
 		} catch (AssertionError ex) {
@@ -268,6 +270,7 @@ public class A1_Assertion {
 		// ---------- Q22 ----------
 		try {
 			assert A1.Q22("aabbbcc") == 'b';
+                        assert A1.Q22("missklop") == 'w';
 			System.out.println("Q22 test passed");
 			score += 1;
 		} catch (AssertionError ex) {
@@ -279,6 +282,7 @@ public class A1_Assertion {
 		// ---------- Q23 ----------
 		try {
 			assert A1.Q23("abcabcabc", "abc") == 3;
+                        assert A1.Q23("jfchdjishfin", "def") == 6;
 			System.out.println("Q23 test passed");
 			score += 1;
 		} catch (AssertionError ex) {
@@ -291,7 +295,8 @@ public class A1_Assertion {
 		try {
 			assert A1.Q24("12345") == true;
 			assert A1.Q24("") == false;
-			assert A1.Q24("12a45") == false;
+			assert A1.Q24("12a45") == false; 
+                        
 			System.out.println("Q24 test passed");
 			score += 1;
 		} catch (AssertionError ex) {
