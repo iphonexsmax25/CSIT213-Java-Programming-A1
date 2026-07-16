@@ -346,6 +346,8 @@ public class A1_Assertion {
 
 		// ---------- Q28 ----------
 		try {
+                        assert A1.Q28(0) == 0;
+                        assert A1.Q28(1) == 1;
 			assert A1.Q28(6) == 8;
 			System.out.println("Q28 test passed");
 			score += 1;
