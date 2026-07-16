@@ -603,66 +603,134 @@ public class A1 {
 
 	//Q41 - Write a function to return the sum of all elements in a given row of the grid
 	public static int Q41(int[][] grid, int row) {
+            int total = 0;
+            for(int c = 0; c < grid[row].length; c++){
+                total += grid [row][c];
+            }
 
-		return 0;
+		return total;
 	}
 
 	//Q42 - Write a function to return the sum of all elements in a given column of the grid
 	public static int Q42(int[][] grid, int col) {
+            int total = 0;
+            for (int r =0; r < grid.length;r++){
+                total += grid [r][col];
+            }
 
-		return 0;
+		return total;
 	}
 
 	//Q43 - Write a function to return the largest value in the whole 2D array
 	public static int Q43(int[][] grid) {
+            int max = grid[0][0];
+            for(int r = 0; r < grid.length; r++){
+                for(int c = 0; c < grid[r].length; c++){
+                    if(grid[r][c] > max){
+                        max = grid[r][c];
+                    }
+                }
+            }
 
-		return 0;
+		return max;
 	}
 
 	//Q44 - Write a function to return the sum of the main diagonal of a square grid
 	//      (the main diagonal runs from the top-left corner to the bottom-right corner)
 	public static int Q44(int[][] grid) {
+            int total = 0;
+            for(int i =0; i < grid.length; i++){
+                total += grid[i][i];
+            }
 
-		return 0;
+		return total;
 	}
 
 	//Q45 - Write a function to return the sum of the anti-diagonal of a square grid
 	//      (the anti-diagonal runs from the top-right corner to the bottom-left corner)
 	public static int Q45(int[][] grid) {
+            int total = 0;
+            int n = grid.length;
+            for(int i = 0; i < n; i++){
+                total += grid[i][n - 1 - i];
+            }
 
-		return 0;
+		return total;
 	}
 
 	//Q46 - Write a function to return how many times target appears in the 2D array
 	public static int Q46(int[][] grid, int target) {
+            int count = 0; 
+            for ( int r = 0; r < grid.length; r++){
+                for(int c = 0; c< grid[r].length; c++){
+                    if (grid[r][c] == target){
+                        count++;
+                    }
+                }
+            }
 
 		return 0;
 	}
 
 	//Q47 - Write a function to return an int array where each element is the sum of that row in the grid
 	public static int[] Q47(int[][] grid) {
+            int[] result = new int[grid.length];
+            for(int r = 0; r < grid.length; r++){
+                int total = 0;
+                for(int c = 0; c < grid[r].length; c++){
+                    total += grid[r][c];
+                }
+                result[r] = total;
+            }
+            
 
-		return new int[]{0};
+		return result;
 	}
 
 	//Q48 - Write a function to return an int array where each element is the largest value in that row
 	public static int[] Q48(int[][] grid) {
+            int[] result = new int[grid.length];
+            for(int r = 0; r < grid.length; r++){
+                int max = grid[r][0];
+                for(int c = 1; c < grid[r].length; c++ ){
+                    if(grid[r][c] > max){
+                        max = grid[r][c];
+                    }
+                }
+                result[r] =max;
+            }
 
-		return new int[]{0};
+		return result;
 	}
 
 	//Q49 - Write a function to return the transpose of a rectangular grid
 	//      (the transpose turns rows into columns, so element [r][c] becomes [c][r])
 	public static int[][] Q49(int[][] grid) {
+            int rows= grid.length;
+            int cols = grid[0].length;
+            int[][] result = new int[cols][rows];
+            for(int r = 0; r< rows; r++){
+                for(int c = 0; c < cols; c++){
+                    result[c][r] = grid[r][c];
+                }
+            }
 
-		return new int[][] {{0}};
+		return result;
 	}
 
 	//Q50 - Write a function to return true if the grid is rectangular (every row has the same length),
 	//      otherwise false
 	public static boolean Q50(int[][] grid) {
-
-		return false;
+            if(grid.length == 0){
+                return true;
+            }
+            int firstLength = grid[0].length;
+            for(int r = 1; r < grid.length; r++){
+                if(grid[r].length != firstLength){
+                    return false;
+                }
+            }
+		return true;
 	}
 
 }

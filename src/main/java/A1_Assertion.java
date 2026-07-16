@@ -142,7 +142,9 @@ public class A1_Assertion {
 
 		// ---------- Q11 ----------
 		try {
-			//Write assertion code to test your function
+			int[] nums = { 1, 2, 2, 3, 4, 4, 4, };
+                        assert A1.Q11(nums) == 4;
+                        System.out.println("Q11 test passed");
 
 		} catch (AssertionError ex) {
 			System.out.println("Q11 test failed - AssertionError");
@@ -152,8 +154,10 @@ public class A1_Assertion {
 
 		// ---------- Q12 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[] nums = { 1, 2, 3, 4 };
+			assert Arrays.equals(A1.Q12(nums), new int[] { 4, 1, 2, 3 });
+			System.out.println("Q12 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q12 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -162,8 +166,9 @@ public class A1_Assertion {
 
 		// ---------- Q13 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q13("Hello World") == 3;
+			System.out.println("Q13 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q13 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -172,8 +177,9 @@ public class A1_Assertion {
 
 		// ---------- Q14 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q14("hello").equals("olleh");
+			System.out.println("Q14 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q14 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -182,8 +188,10 @@ public class A1_Assertion {
 
 		// ---------- Q15 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q15("racecar") == true;
+			assert A1.Q15("hello") == false;
+			System.out.println("Q15 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q15 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -192,8 +200,9 @@ public class A1_Assertion {
 
 		// ---------- Q16 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q16("hello world").equals("hello_world");
+			System.out.println("Q16 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q16 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -202,8 +211,9 @@ public class A1_Assertion {
 
 		// ---------- Q17 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q17("Hello World") == 2;
+			System.out.println("Q17 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q17 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -212,8 +222,9 @@ public class A1_Assertion {
 
 		// ---------- Q18 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q18("hello").equals("hll");
+			System.out.println("Q18 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q18 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -222,8 +233,10 @@ public class A1_Assertion {
 
 		// ---------- Q19 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q19("listen", "silent") == true;
+			assert A1.Q19("hello", "world") == false;
+			System.out.println("Q19 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q19 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -232,8 +245,9 @@ public class A1_Assertion {
 
 		// ---------- Q20 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q20("swiss") == 'w';
+			System.out.println("Q20 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q20 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -242,8 +256,9 @@ public class A1_Assertion {
 
 		// ---------- Q21 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q21("hello world").equals("Hello World");
+			System.out.println("Q21 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q21 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -252,8 +267,9 @@ public class A1_Assertion {
 
 		// ---------- Q22 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q22("aabbbcc") == 'b';
+			System.out.println("Q22 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q22 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -262,8 +278,9 @@ public class A1_Assertion {
 
 		// ---------- Q23 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q23("abcabcabc", "abc") == 3;
+			System.out.println("Q23 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q23 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -272,8 +289,11 @@ public class A1_Assertion {
 
 		// ---------- Q24 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q24("12345") == true;
+			assert A1.Q24("") == false;
+			assert A1.Q24("12a45") == false;
+			System.out.println("Q24 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q24 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -282,8 +302,9 @@ public class A1_Assertion {
 
 		// ---------- Q25 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q25("banana").equals("ban");
+			System.out.println("Q25 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q25 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -292,8 +313,10 @@ public class A1_Assertion {
 
 		// ---------- Q26 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q26(7) == true;
+			assert A1.Q26(8) == false;
+			System.out.println("Q26 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q26 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -302,8 +325,9 @@ public class A1_Assertion {
 
 		// ---------- Q27 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q27(5) == 120;
+			System.out.println("Q27 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q27 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -312,8 +336,9 @@ public class A1_Assertion {
 
 		// ---------- Q28 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q28(6) == 8;
+			System.out.println("Q28 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q28 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -322,8 +347,9 @@ public class A1_Assertion {
 
 		// ---------- Q29 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q29(12345) == 15;
+			System.out.println("Q29 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q29 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -332,8 +358,9 @@ public class A1_Assertion {
 
 		// ---------- Q30 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q30(12345) == 5;
+			System.out.println("Q30 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q30 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -342,8 +369,9 @@ public class A1_Assertion {
 
 		// ---------- Q31 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q31(1234) == 4321;
+			System.out.println("Q31 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q31 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -352,8 +380,11 @@ public class A1_Assertion {
 
 		// ---------- Q32 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q32(2000) == true;
+			assert A1.Q32(1900) == false;
+			assert A1.Q32(2024) == true;
+			System.out.println("Q32 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q32 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -362,8 +393,9 @@ public class A1_Assertion {
 
 		// ---------- Q33 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q33(48, 18) == 6;
+			System.out.println("Q33 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q33 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -372,8 +404,9 @@ public class A1_Assertion {
 
 		// ---------- Q34 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q34(10) == 3;
+			System.out.println("Q34 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q34 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -382,8 +415,11 @@ public class A1_Assertion {
 
 		// ---------- Q35 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[] nums = { 1, 2, 3, 4, 5, 6 };
+			ArrayList<Integer> result = A1.Q35(nums);
+			assert result.size() == 3 && result.get(0) == 2 && result.get(1) == 4 && result.get(2) == 6;
+			System.out.println("Q35 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q35 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -392,8 +428,14 @@ public class A1_Assertion {
 
 		// ---------- Q36 ----------
 		try {
-			//Write assertion code to test your function
-
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			list.add(1);
+			list.add(2);
+			list.add(3);
+			list.add(4);
+			assert A1.Q36(list) == 10;
+			System.out.println("Q36 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q36 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -402,8 +444,18 @@ public class A1_Assertion {
 
 		// ---------- Q37 ----------
 		try {
-			//Write assertion code to test your function
-
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			list.add(1);
+			list.add(2);
+			list.add(2);
+			list.add(3);
+			list.add(1);
+			list.add(4);
+			ArrayList<Integer> result = A1.Q37(list);
+			assert result.size() == 4 && result.get(0) == 1 && result.get(1) == 2 && result.get(2) == 3
+					&& result.get(3) == 4;
+			System.out.println("Q37 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q37 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -412,8 +464,16 @@ public class A1_Assertion {
 
 		// ---------- Q38 ----------
 		try {
-			//Write assertion code to test your function
-
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			list.add(1);
+			list.add(5);
+			list.add(10);
+			list.add(15);
+			list.add(3);
+			ArrayList<Integer> result = A1.Q38(list, 4);
+			assert result.size() == 3 && result.get(0) == 5 && result.get(1) == 10 && result.get(2) == 15;
+			System.out.println("Q38 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q38 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -422,8 +482,15 @@ public class A1_Assertion {
 
 		// ---------- Q39 ----------
 		try {
-			//Write assertion code to test your function
-
+			ArrayList<Integer> list = new ArrayList<Integer>();
+			list.add(3);
+			list.add(7);
+			list.add(2);
+			list.add(9);
+			list.add(4);
+			assert A1.Q39(list) == 9;
+			System.out.println("Q39 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q39 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -432,8 +499,10 @@ public class A1_Assertion {
 
 		// ---------- Q40 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[][] grid = { { 1, 2 }, { 3, 4 } };
+			assert A1.Q40(grid) == 10;
+			System.out.println("Q40 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q40 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -442,8 +511,10 @@ public class A1_Assertion {
 
 		// ---------- Q41 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[][] grid = { { 1, 2, 3 }, { 4, 5, 6 } };
+			assert A1.Q41(grid, 1) == 15;
+			System.out.println("Q41 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q41 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -452,8 +523,10 @@ public class A1_Assertion {
 
 		// ---------- Q42 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[][] grid = { { 1, 2, 3 }, { 4, 5, 6 } };
+			assert A1.Q42(grid, 1) == 7;
+			System.out.println("Q42 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q42 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -462,8 +535,10 @@ public class A1_Assertion {
 
 		// ---------- Q43 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[][] grid = { { 1, 9, 3 }, { 4, 5, 6 } };
+			assert A1.Q43(grid) == 9;
+			System.out.println("Q43 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q43 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -472,8 +547,10 @@ public class A1_Assertion {
 
 		// ---------- Q44 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[][] grid = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+			assert A1.Q44(grid) == 15;
+			System.out.println("Q44 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q44 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -482,8 +559,10 @@ public class A1_Assertion {
 
 		// ---------- Q45 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[][] grid = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+			assert A1.Q45(grid) == 15;
+			System.out.println("Q45 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q45 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -492,8 +571,10 @@ public class A1_Assertion {
 
 		// ---------- Q46 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[][] grid = { { 1, 2, 2 }, { 3, 2, 4 } };
+			assert A1.Q46(grid, 2) == 3;
+			System.out.println("Q46 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q46 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -502,8 +583,10 @@ public class A1_Assertion {
 
 		// ---------- Q47 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[][] grid = { { 1, 2, 3 }, { 4, 5, 6 } };
+			assert Arrays.equals(A1.Q47(grid), new int[] { 6, 15 });
+			System.out.println("Q47 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q47 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -512,8 +595,10 @@ public class A1_Assertion {
 
 		// ---------- Q48 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[][] grid = { { 1, 9, 3 }, { 4, 5, 6 } };
+			assert Arrays.equals(A1.Q48(grid), new int[] { 9, 6 });
+			System.out.println("Q48 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q48 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -522,8 +607,11 @@ public class A1_Assertion {
 
 		// ---------- Q49 ----------
 		try {
-			//Write assertion code to test your function
-
+			int[][] grid = { { 1, 2, 3 }, { 4, 5, 6 } };
+			int[][] expected = { { 1, 4 }, { 2, 5 }, { 3, 6 } };
+			assert Arrays.deepEquals(A1.Q49(grid), expected);
+			System.out.println("Q49 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q49 test failed - AssertionError");
 		} catch (Exception ex) {
@@ -532,13 +620,18 @@ public class A1_Assertion {
 
 		// ---------- Q50 ----------
 		try {
-			//Write assertion code to test your function
-
+			assert A1.Q50(new int[][] { { 1, 2 }, { 3, 4 } }) == true;
+			assert A1.Q50(new int[][] { { 1, 2 }, { 3 } }) == false;
+			System.out.println("Q50 test passed");
+			score += 1;
 		} catch (AssertionError ex) {
 			System.out.println("Q50 test failed - AssertionError");
 		} catch (Exception ex) {
 			System.out.println("Q50 test failed - Exception");
 		}
+
+		System.out.println();
+		System.out.println("Total score: " + score + " / 50");
 
 	}
 }
